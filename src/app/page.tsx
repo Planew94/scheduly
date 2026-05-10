@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Calendar, Clock, Link2, Video, Bell, BarChart3, Globe, Puzzle } from "lucide-react";
 
 const features = [
@@ -19,18 +21,16 @@ export default function LandingPage() {
       {/* Nav */}
       <nav className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Calendar className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-xl font-bold text-slate-900">Scheduly</span>
-          </div>
+          <Link href="/">
+            <Image src="/scheduly-logo-lockup.svg" alt="Scheduly" width={130} height={32} priority />
+          </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
             <a href="#features" className="hover:text-slate-900 transition-colors">Features</a>
             <a href="#how-it-works" className="hover:text-slate-900 transition-colors">How it works</a>
             <a href="#pricing" className="hover:text-slate-900 transition-colors">Pricing</a>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Link href="/login">
               <Button variant="ghost" size="sm">Log in</Button>
             </Link>
@@ -157,12 +157,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-blue-600 rounded-md flex items-center justify-center">
-              <Calendar className="w-3 h-3 text-white" />
-            </div>
-            <span className="text-white font-semibold">Scheduly</span>
-          </div>
+          <Image src="/scheduly-logo-lockup-dark.svg" alt="Scheduly" width={110} height={28} />
           <p className="text-sm">© 2026 Scheduly. All rights reserved.</p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="hover:text-white transition-colors">Privacy</a>

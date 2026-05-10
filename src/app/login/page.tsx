@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Calendar } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 function GoogleIcon() {
@@ -20,11 +20,8 @@ export default function LoginPage() {
     <div className="min-h-screen flex">
       {/* Left panel */}
       <div className="hidden lg:flex lg:w-1/2 bg-blue-600 flex-col justify-between p-12">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-            <Calendar className="w-4 h-4 text-white" />
-          </div>
-          <span className="text-xl font-bold text-white">Scheduly</span>
+        <Link href="/">
+          <Image src="/scheduly-logo-lockup-dark.svg" alt="Scheduly" width={130} height={32} />
         </Link>
 
         <div>
@@ -61,11 +58,10 @@ export default function LoginPage() {
       {/* Right panel */}
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
-          <div className="lg:hidden flex items-center gap-2 mb-8">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Calendar className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-xl font-bold text-slate-900">Scheduly</span>
+          <div className="lg:hidden mb-8">
+            <Link href="/">
+              <Image src="/scheduly-logo-lockup.svg" alt="Scheduly" width={130} height={32} />
+            </Link>
           </div>
 
           <h1 className="text-3xl font-bold text-slate-900 mb-2">Welcome back</h1>
