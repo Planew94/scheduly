@@ -28,7 +28,8 @@ export function DashboardNav() {
       )}>
         <div className="h-16 flex items-center px-6 border-b border-slate-100">
           <Link href="/dashboard">
-            <Image src="/scheduly-logo-lockup.svg" alt="Scheduly" width={120} height={30} />
+            <Image src="/scheduly-logo-lockup.svg" alt="Scheduly" width={120} height={30} className="logo-light" />
+            <Image src="/scheduly-logo-lockup-dark.svg" alt="Scheduly" width={120} height={30} className="logo-dark" />
           </Link>
         </div>
 
@@ -77,7 +78,8 @@ export function DashboardNav() {
         <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2 rounded-lg hover:bg-slate-100">
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
-        <Image src="/scheduly-logo-lockup.svg" alt="Scheduly" width={110} height={28} />
+        <Image src="/scheduly-logo-lockup.svg" alt="Scheduly" width={110} height={28} className="logo-light" />
+        <Image src="/scheduly-logo-lockup-dark.svg" alt="Scheduly" width={110} height={28} className="logo-dark" />
         <div className="ml-auto">
           <ThemeToggle />
         </div>

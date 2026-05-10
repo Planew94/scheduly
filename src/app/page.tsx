@@ -22,7 +22,8 @@ export default function LandingPage() {
       <nav className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/">
-            <Image src="/scheduly-logo-lockup.svg" alt="Scheduly" width={130} height={32} priority />
+            <Image src="/scheduly-logo-lockup.svg" alt="Scheduly" width={130} height={32} priority className="logo-light" />
+            <Image src="/scheduly-logo-lockup-dark.svg" alt="Scheduly" width={130} height={32} priority className="logo-dark" />
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
             <a href="#features" className="hover:text-slate-900 transition-colors">Features</a>

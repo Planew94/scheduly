@@ -13,6 +13,13 @@ body {
 }
 
 /* ==========================================================================
+   LOGO VARIANTS — swap between light and dark wordmark SVGs
+   ========================================================================== */
+.logo-dark              { display: none; }
+html.dark .logo-light   { display: none; }
+html.dark .logo-dark    { display: block; }
+
+/* ==========================================================================
    DARK MODE — toggled by adding .dark to <html>
    Remaps Tailwind utility classes. Preference persisted in localStorage.
    ========================================================================== */
